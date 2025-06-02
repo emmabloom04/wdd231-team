@@ -5,3 +5,5 @@ This is an app that will allow users to create playlists of their favorite songs
 Anyone who wants to keep a library of their favorite songs organized into different playlists.
 ## Features and Functionalities
 Adding new songs, seeing album cover art, playing a sample of the song, adding songs to playlists.
+## Current Build Link
+https://teal-haupia-3fbedf.netlify.app/
