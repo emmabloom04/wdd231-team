@@ -1,6 +1,23 @@
+/* 
+6B2D5C
+13505B
+A0598F
+51A3A3
+8ECECE
+*/
+
+/* *{
+    background-color: #13505B;
+} */
 nav, footer{
-    background-color: #168460;
+    background-color: #13505B;
     color: white;
+    display: flex;
+    max-height: 100px;
+}
+nav:hover, footer:hover{
+    background-color: #51A3A3;
+    color: black;
     display: flex;
     max-height: 100px;
 }
@@ -58,4 +75,29 @@ img{
 p{
     display: flex;
     justify-content: center;
+}
+@media screen and (max-width: 900px) {
+    #hero, .home-grid {
+        display: block;
+        height: auto;  
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    header {
+        height: 275px;
+    }
+    footer {
+        height: fit-content;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+    .music-library {
+        font-size: 25px;
+    }
+    footer {
+        margin-top: 25px;
+    }
 }
