@@ -90,10 +90,11 @@ Do so by running these commands:
 
 #### **Step 5: Syncing your branch with main**
 For future work, you want to make sure that your branch is fully updated with the code in main. To do so, make sure to run these commands when you have your branch checked out:
-```bash
-git fetch origin
-git merge origin/main
-```
+* **Action:** Syncs your branch with the `main` branch.
+    ```bash
+    git fetch origin
+    git merge origin/main
+    ```
 
 ## Current Build Link
 https://teal-haupia-3fbedf.netlify.app/
