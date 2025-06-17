@@ -14,6 +14,11 @@ nav, footer{
     color: white;
     display: flex;
     max-height: 100px;
+    text-decoration: none;
+    justify-content: center;
+}
+#logo{
+    max-height: 80px;
 }
 nav:hover, footer:hover{
     background-color: #51A3A3;
