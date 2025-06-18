@@ -1,4 +1,4 @@
-# Playlist Maker
+# Spinlist
 ## Description
 This is an app that will allow users to create playlists of their favorite songs. They can add songs, typing in just the song title, and data gathered from an API will fill in the rest of the information. The goal is that they will be able to add different songs to different playlists.
 ## Target Audience
