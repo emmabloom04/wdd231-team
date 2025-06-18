@@ -1,4 +1,5 @@
 // base function for accessing api
+
 async function GetJson(url) {
     const options = {
         method: "GET"
@@ -16,8 +17,11 @@ async function GetJson(url) {
 
 // function for accessing itunes api
 async function FindSong(artist, songTitle) {
+    const corsProxy = "https://corsproxy.io/?";
     const baseUrl = `https://itunes.apple.com/search?term=${artist}+${songTitle}&media=music&entity=musicTrack&limit=1`;
-    const data = await GetJson(baseUrl);
+    const proxiedUrl = corsProxy + baseUrl
+    
+    const data = await GetJson(proxiedUrl);
 
     if (data.resultCount > 0) {
         const song = data.results[0];
