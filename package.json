@@ -1,7 +1,7 @@
 {
   "name": "nps",
   "version": "1.0.1",
-  "description": "",
+  "description": "This is an app that will allow users to create playlists of their favorite songs. They can add songs, typing in just the song title, and data gathered from an API will fill in the rest of the information. The goal is that they will be able to add different songs to different playlists. ## Target Audience Anyone who wants to keep a library of their favorite songs organized into different playlists. ## Features and Functionalities Adding new songs, seeing album cover art, playing a sample of the song, adding songs to playlists. ## Github Branching",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -13,6 +13,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
     "vite": "^6.2.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmabloom04/wdd231-team.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emmabloom04/wdd231-team/issues"
+  },
+  "homepage": "https://github.com/emmabloom04/wdd231-team#readme"
 }
