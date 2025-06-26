@@ -5,10 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "vite",
-    "build": "vite build --emptyOutDir",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "backend": "node server.cjs",
+  "start": "concurrently \"npm run backend\" \"npm run dev\"",
+  "build": "vite build --emptyOutDir",
+  "preview": "vite preview"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
