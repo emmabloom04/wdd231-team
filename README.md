@@ -1,4 +1,4 @@
-# Playlist Maker
+# Spinlist
 ## Description
 This is an app that will allow users to create playlists of their favorite songs. They can add songs, typing in just the song title, and data gathered from an API will fill in the rest of the information. The goal is that they will be able to add different songs to different playlists.
 ## Target Audience
@@ -86,6 +86,14 @@ Do so by running these commands:
 * **Action:** Pull the very latest changes from the remote `main` branch.
     ```bash
     git pull origin main
+    ```
+
+#### **Step 5: Syncing your branch with main**
+For future work, you want to make sure that your branch is fully updated with the code in main. To do so, make sure to run these commands when you have your branch checked out:
+* **Action:** Syncs your branch with the `main` branch.
+    ```bash
+    git fetch origin
+    git merge origin/main
     ```
 
 ## Current Build Link

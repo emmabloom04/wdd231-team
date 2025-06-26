@@ -1,5 +1,6 @@
 // base function for accessing api
-async function getJson(url) {
+
+async function GetJson(url) {
     const options = {
         method: "GET"
     };
@@ -15,17 +16,18 @@ async function getJson(url) {
 }
 
 // function for accessing itunes api
-async function findSong(artist, songTitle) {
-    const baseUrl = `https://itunes.apple.com/search?term=${artist}+${songTitle}&media=music&entity=musicTrack&limit=1`;
-    const data = await getJson(baseUrl);
+async function FindSong(artist, songTitle) {
+
+    const baseUrl = `/api/itunes?artist=${artist}&song=${songTitle}`;
+    
+    const data = await GetJson(baseUrl);
 
     if (data.resultCount > 0) {
         const song = data.results[0];
-        console.log("Found:", song.trackName, "by", song.artistName);
-        console.log("Preview", song.previewUrl);
-        console.log("Artwork:", song.artworkUrl100);
+        return song;
     } else {
         console.log("No song found.");
+        return;
     }
 }
 // different data returned from itunes api:
@@ -62,19 +64,37 @@ async function findSong(artist, songTitle) {
 // primaryGenreName             Genre of the track
 // isStreamable                 Whether it’s streamable
 
-
-function songTemplate() {
-    return `<div class="song" id="sunroof">
-                <img src="images/sunroof.jpeg" alt="nicky youre and hey daisy sunroof album cover">
-                <p class="song-length">2 minutes 43 seconds</p>
-                <p class="song-title">Sunroof</p>
-                <p class="album-title">Sunroof - Single</p>
-                <p class="artist">Nicky Youre & hey daisy</p>
-            </div>`
+function ConvertMillisToMins(milliseconds) {
+    const totalSeconds = Math.floor(milliseconds / 1000);
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    return `${minutes} minutes and ${seconds.toString().padStart(2, '0')} seconds`
 }
 
-findSong("nicky youre hey daisy", "sunroof");
-findSong("taylor swift", "cruel summer");
-findSong("wave to earth", "bad");
-findSong("one direction", "steal my girl");
-findSong("quinn xcii", "melt");
+async function SongTemplate(artist, songTitle) {
+    let song = await FindSong(artist, songTitle);
+    if (!song) {
+        return `<p> No song found for "${artist} - ${songTitle}"</p>`
+    }
+    return `<div class="song">
+                <img src="${song.artworkUrl100}" alt="${song.artistName} ${song.collectionName} album cover">
+                <p class="song-length">${ConvertMillisToMins(song.trackTimeMillis)}</p>
+                <p class="song-title">${song.trackName}</p>
+                <p class="album-title">${song.collectionName}</p>
+                <p class="artist">${song.artistName}</p>
+            </div>`
+}
+async function LoadSongs() {
+    const songs = [
+        ["nicky youre", "sunroof"],
+        ["taylor swift", "cruel summer"],
+        ["wave to earth", "bad"],
+        ["one direction", "steal my girl"],
+        ["quinn xcii", "melt"]
+    ];
+    const songsContainer = document.querySelector(".music-library");
+    const songHtmlArray = await Promise.all(songs.map(([artist, title]) => SongTemplate(artist, title)))
+    songsContainer.innerHTML = songHtmlArray.join("");
+}
+
+LoadSongs();
