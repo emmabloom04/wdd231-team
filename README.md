@@ -76,24 +76,11 @@ Now you are on your isolated feature branch. Make all your code changes, add new
     ```
     *(**Note:** The first time you push a new branch, Git might tell you to use `--set-upstream origin feature/your-task-name-here`. Copy and paste that exact command.)*
 
-#### **Step 4: Merging**
-When done with your tasks, make sure you have pushed your branch. Let Emma know when this is done, and she will open a pull request and merge your branch into main. She will let you know if you ever need to pull changes. If you need to pull changes, make sure to switch to main.
-Do so by running these commands: 
-* **Action:** Switch to the `main` branch.
-    ```bash
-    git checkout main
-    ```
-* **Action:** Pull the very latest changes from the remote `main` branch.
-    ```bash
-    git pull origin main
-    ```
-
 #### **Step 5: Syncing your branch with main**
 For future work, you want to make sure that your branch is fully updated with the code in main. To do so, make sure to run these commands when you have your branch checked out:
 * **Action:** Syncs your branch with the `main` branch.
     ```bash
-    git fetch origin
-    git merge origin/main
+    git pull origin main
     ```
 
 ## Current Build Link
