@@ -80,6 +80,9 @@ h1, h2 {
 
 }
   
+a {
+  text-decoration: none;
+}
 .song:hover {
     transform: scale(1.03);
   }

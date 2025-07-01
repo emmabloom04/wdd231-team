@@ -16,7 +16,7 @@ async function GetJson(url) {
 }
 
 // function for accessing itunes api
-async function FindSong(artist, songTitle) {
+export async function FindSong(artist, songTitle) {
 
     const baseUrl = `/api/itunes?artist=${artist}&song=${songTitle}`;
     
@@ -64,7 +64,7 @@ async function FindSong(artist, songTitle) {
 // primaryGenreName             Genre of the track
 // isStreamable                 Whether it’s streamable
 
-function ConvertMillisToMins(milliseconds) {
+export function ConvertMillisToMins(milliseconds) {
     const totalSeconds = Math.floor(milliseconds / 1000);
     const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
@@ -73,16 +73,20 @@ function ConvertMillisToMins(milliseconds) {
 
 async function SongTemplate(artist, songTitle) {
     let song = await FindSong(artist, songTitle);
+    let urlArtist = artist.replaceAll(" ", "*")
+    let urlSong = songTitle.replaceAll(" ", "*")
     if (!song) {
         return `<p> No song found for "${artist} - ${songTitle}"</p>`
     }
-    return `<div class="song">
-                <img src="${song.artworkUrl100}" alt="${song.artistName} ${song.collectionName} album cover">
-                <p class="song-length">${ConvertMillisToMins(song.trackTimeMillis)}</p>
-                <p class="song-title">${song.trackName}</p>
-                <p class="album-title">${song.collectionName}</p>
-                <p class="artist">${song.artistName}</p>
-            </div>`
+    return `<a href="song-details.html?song=${urlSong}&artist=${urlArtist}">
+                <div class="song">
+                    <img src="${song.artworkUrl100}" alt="${song.artistName} ${song.collectionName} album cover">
+                    <p class="song-length">${ConvertMillisToMins(song.trackTimeMillis)}</p>
+                    <p class="song-title">${song.trackName}</p>
+                    <p class="album-title">${song.collectionName}</p>
+                    <p class="artist">${song.artistName}</p>
+                </div>
+            <a/>`
 }
 async function LoadSongs() {
     const songs = [
