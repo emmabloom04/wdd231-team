@@ -5,12 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-  "dev": "vite",
-  "backend": "node server.cjs",
-  "start": "concurrently \"npm run backend\" \"npm run dev\"",
-  "build": "vite build --emptyOutDir",
-  "preview": "vite preview"
-},
+    "dev": "vite",
+    "backend": "node server.cjs",
+    "start": "concurrently \"npm run backend\" \"npm run dev\"",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/emmabloom04/wdd231-team/issues"
   },
-  "homepage": "https://github.com/emmabloom04/wdd231-team#readme"
+  "homepage": "https://github.com/emmabloom04/wdd231-team#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
 }
