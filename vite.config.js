@@ -12,6 +12,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "src/index.html"),
+        songForm: resolve(__dirname, "src/song-form.html"),
+        songDetails: resolve(__dirname, "src/song-details.html")
       }
     }
   }
