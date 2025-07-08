@@ -20,12 +20,13 @@ nav, footer {
     align-items: center;
     background-color: #13505B;
     color: white;
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
     max-height: 100px;
     text-decoration: none;
   }
 #logo{
     max-width: 80px;
+    margin-left: 0;
     /* grid-column: 1/2; */
 }
 .nav-links {
