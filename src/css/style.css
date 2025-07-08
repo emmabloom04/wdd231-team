@@ -20,12 +20,13 @@ nav, footer {
     align-items: center;
     background-color: #13505B;
     color: white;
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
     max-height: 100px;
     text-decoration: none;
   }
 #logo{
     max-width: 80px;
+    margin-left: 0;
     /* grid-column: 1/2; */
 }
 .nav-links {
@@ -58,9 +59,35 @@ h1, h2 {
     display: flex;
     justify-content: center;
   }
+
+/* #new-song{
+
+} */
+button{
+    background-color: #6B2D5C; /* Primary green color */
+    color: white; /* Text color */
+    padding: 12px 24px; /* Space inside button */
+    border: none; /* Removes default border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px;
+    cursor: pointer; /* Changes cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-height: 50px;
+}
+button:hover {
+    background-color: #A0598F; /* Darker green */
+    transform: translateY(-2px); /* Slight lift */
+}
+button:active {
+    background-color: #6B2D5C;
+    transform: translateY(0);
+}
+
 .music-library{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px; /* space between the boxes */
     align-items: center;
 }
 
@@ -72,12 +99,22 @@ h1, h2 {
     max-width: 400px;
     justify-content: space-between;
     margin: 30px;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
     transition: transform 0.2s ease;
     /* transition: width 0.2s ease-out, height 0.4s ease-out, background-color 0.2s ease-out; */
-
+    flex: 1 1 calc(33.33% - 16px);
+    min-width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    /* SEEIng if works/looks good */
+    display: flex;
+    flex-direction: column; /* puts image & title vertically */
+    align-items: center; /* centers horizontally */
+    justify-content: center; /* optional: centers vertically */
+    text-align: center; /* centers text */
+    padding: 20px;
 }
   
 a {
@@ -87,26 +124,6 @@ a {
 .song:hover {
     transform: scale(1.03);
   }
-
-#sunroof:hover{
-background-color: #b9181c;
-}
-
-#cruelSummer:hover{
-    background-color: #e4aaca;
-}
-
-#bad:hover{
-background-color: #d3d9d9;
-}
-
-#stealMyGirl:hover{
-background-color: #8b898a;
-}
-
-#melt:hover{
-background-color: #be9818;
-}
 
 img{
     max-height: 200px;
