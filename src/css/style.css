@@ -25,7 +25,7 @@ nav, footer {
     text-decoration: none;
   }
 #logo{
-    max-height: 80px;
+    max-width: 80px;
     /* grid-column: 1/2; */
 }
 .nav-links {
