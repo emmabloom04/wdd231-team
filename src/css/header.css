@@ -1,0 +1,31 @@
+@import "variables.css";
+#logo {
+  max-width: 80px;
+  margin-left: 0;
+}
+nav,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-green);
+  color: var(--text-color-light);
+  max-height: 100px;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  color: var(--text-color-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: var(--light-green);
+}
