@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Michroma&display=swap');
+
+:root {
+    --dark-purple: #6B2D5C;
+    --dark-green: #13505B;
+    --light-purple: #A0598F;
+    --light-green: #51A3A3;
+    --light-blue: #8ECECE;
+    --text-color-light: white;
+    --text-color-dark: black;
+    --song-background-color: #fff7f7;
+    --box-shadow: rgba(0, 0, 0, 0.1);
+    --header-font: "Michroma", sans-serif;
+    --body-font: "Karla", sans-serif;
+}
