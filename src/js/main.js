@@ -28,39 +28,6 @@ export async function FindSong(artist, songTitle) {
     return;
   }
 }
-// different data returned from itunes api:
-// Field                        Description
-// wrapperType                  Type of wrapper (e.g., track)
-// kind                         Type of result (e.g., song)
-// artistId                     Unique ID for the artist
-// collectionId                 Unique ID for the album (collection)
-// trackId                      Unique ID for the track
-// artistName                   Artist’s name
-// collectionName               Album name
-// trackName                    Song title
-// collectionCensoredName       Censored album name (if applicable)
-// trackCensoredName            Censored song title
-// artistViewUrl                iTunes/Apple Music artist page
-// collectionViewUrl            Album page
-// trackViewUrl                 Song page
-// previewUrl                   30-90 sec audio sample (M4A format)
-// artworkUrl30                 30x30 artwork image
-// artworkUrl60                 60x60 artwork image
-// artworkUrl100                100x100 artwork image
-// collectionPrice              Album price
-// trackPrice                   Song price
-// releaseDate                  ISO-formatted release date
-// collectionExplicitness       Explicit status of the album
-// trackExplicitness            Explicit status of the song
-// discCount                    Total number of discs in album
-// discNumber                   Which disc the track is on
-// trackCount                   Total tracks on the album
-// trackNumber                  Track’s position in the album
-// trackTimeMillis              Duration of the song in milliseconds
-// country                      Country of the store used (e.g. USA)
-// currency                     Currency (e.g. USD)
-// primaryGenreName             Genre of the track
-// isStreamable                 Whether it’s streamable
 
 export function ConvertMillisToMins(milliseconds) {
   const totalSeconds = Math.floor(milliseconds / 1000);
@@ -102,7 +69,7 @@ function AddSongs(songList) {
 
   let urlArtist = artistName.replaceAll(" ", "*");
   let urlSong = songTitle.replaceAll(" ", "*");
-  const songInfo = [urlSong, urlArtist];
+  const songInfo = [urlArtist, urlSong];
 
   songList.push(songInfo);
   localStorage.setItem("songList", JSON.stringify(songList));
