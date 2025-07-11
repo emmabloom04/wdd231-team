@@ -1,22 +1,17 @@
 @import "variables.css";
 .music-library {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .song {
   background-color: var(--song-background-color);
-  color: black;
-  border: #bfbebe;
+  color: var(--text-color-dark);
+  border: var(--border-color);
   max-width: 400px;
-  justify-content: space-between;
   margin: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  box-shadow: 0 4px 8px var(--box-shadow);
   transition: transform 0.2s ease;
-  flex: 1 1 calc(33.33% - 16px);
   min-width: 200px;
   padding: 20px;
   box-sizing: border-box;

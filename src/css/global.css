@@ -4,8 +4,7 @@ body {
     margin: 0;
     padding: 0;
 }
-h1,
-h2 {
+h1 {
   font-family: var(--header-font);
   color: var(--text-color-dark);
   display: flex;
