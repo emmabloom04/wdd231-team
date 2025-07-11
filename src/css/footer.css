@@ -1,0 +1,7 @@
+@import "variables.css";
+footer {
+    text-align: center;
+    background-color: var(--dark-green);
+    color: var(--text-color-light);
+    padding: 1rem;
+}
