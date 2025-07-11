@@ -1,0 +1,26 @@
+#song-details-title {
+    margin-bottom: 5rem;
+}
+.song-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin: 1rem;
+    column-gap: 1rem;
+    margin-bottom: 5rem;
+}
+.song-container img {
+    grid-column: 2/3;
+    grid-row: 1/5;
+    height: 100%;
+    justify-self: center;
+}
+.song-container audio {
+    grid-column: 2/3;
+    grid-row: 5/6;
+    justify-self: center;
+}
+.song-container p {
+    grid-column: 3/4;
+    justify-self: left;
+}
