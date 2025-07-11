@@ -52,14 +52,14 @@ async function SongTemplate(artist, songTitle, index) {
             </div>`;
   }
   return `<div class="song" data-index="${index}">
-            <a href="song-details.html?song=${urlSong}&artist=${urlArtist}">
+            <a class="song-link" href="song-details.html?song=${urlSong}&artist=${urlArtist}">
               <img src="${song.artworkUrl100}" alt="${song.artistName} ${song.collectionName} album cover">
               <p class="song-title">${song.trackName}</p>
               <p class="artist">${song.artistName}</p>
               <p class="album-title">${song.collectionName}</p>
               <p class="song-length">${ConvertMillisToMins(song.trackTimeMillis)}</p>
             </a>
-            <button class="delete-song" data-index="${index}">Delete Song</button>
+            <button class="delete-song" data-index="${index}">Delete</button>
           </div>`;
 }
 
