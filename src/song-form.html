@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Song</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/main.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
+      <a href="index.html">
+        <img id="logo" src="images/spinlist.jpg" alt="logo" />
+      </a>
       <nav>
-          <div class="logo"></div>
-          <a href="#">
-            <img id="logo" src="images/spinlist.jpg" alt="logo" />
-          </a>
-          <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Library</a></li>
-            <li><a href="#">My Playlists</a></li>
-          </ul>
+        <a href="index.html">Home</a>
+        <a href="#">Library</a>
+        <a href="#">My Playlists</a>
       </nav>
     </header>
     <main>
-        <form action="">
-            <h1>New Song</h1>
-            <label for="title">Song Title</label>
-            <input type="text" id="title" name="title" required>
+      <form action="">
+        <h1>New Song</h1>
+        <label for="title">Song Title</label>
+        <input type="text" id="title" name="title" required />
 
-            <label for="artist">Artist</label>
-            <input type="text" id="artist" name="artist" required>
+        <label for="artist">Artist</label>
+        <input type="text" id="artist" name="artist" required />
 
-            <button id="save-button">Save</button>
-        </form>
+        <button id="save-button">Save</button>
+      </form>
     </main>
     <footer>
       <p>Spinlist &copy;2025</p>
     </footer>
-</body>
+  </body>
 </html>

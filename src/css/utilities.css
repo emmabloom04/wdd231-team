@@ -1,0 +1,36 @@
+@import "utilities.css";
+@media screen and (max-width: 960px) {
+  .music-library {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  header {
+    background-color: var(--text-color-light);
+    align-items: flex-start;
+  }
+  #logo {
+    margin-top: 1rem;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  nav a {
+    text-align: center;
+    margin-right: 0;
+    padding: 0.25rem;
+    color: var(--text-color-dark);
+    margin-top: 1rem;
+  }
+  nav a:hover {
+    text-decoration: underline;
+    background-color: var(--text-color-light);
+    cursor: pointer;
+  }
+  .music-library {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+  }
+}
