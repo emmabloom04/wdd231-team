@@ -16,30 +16,41 @@ A0598F
 } */
 nav, footer {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: flex-start;
     align-items: center;
     background-color: #13505B;
     color: white;
     /* padding: 1rem 2rem; */
+    padding: 1rem 2rem; /* try this out*/
     max-height: 100px;
     text-decoration: none;
   }
-#logo{
+  .nav-left{
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+  } /* try this out*/
+
+    #logo{
     max-width: 80px;
-    margin-left: 0;
+    height: auto; /* try this out*/
+    /* margin-left: 0; */
     /* grid-column: 1/2; */
 }
 .nav-links {
     list-style: none;
     display: flex;
     gap: 2rem;
+    margin: 0; /* try this out*/
+    padding: 0; /* try this out*/
   }
   
   .nav-links a {
     color: #f4f4f4;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
   }
   
   .nav-links a:hover {
@@ -64,20 +75,20 @@ h1, h2 {
 
 } */
 button{
-    background-color: #6B2D5C; /* Primary green color */
-    color: white; /* Text color */
-    padding: 12px 24px; /* Space inside button */
-    border: none; /* Removes default border */
-    border-radius: 8px; /* Rounded corners */
+    background-color: #6B2D5C; 
+    color: white; 
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px; 
     font-size: 16px;
-    cursor: pointer; /* Changes cursor on hover */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     max-height: 50px;
 }
 button:hover {
-    background-color: #A0598F; /* Darker green */
-    transform: translateY(-2px); /* Slight lift */
+    background-color: #A0598F; 
+    /* transform: translateY(-2px); */
 }
 button:active {
     background-color: #6B2D5C;
