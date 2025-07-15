@@ -11,6 +11,18 @@ Adding new songs, seeing album cover art, playing a sample of the song, adding s
 
 This document provides a direct, step-by-step guide on how to implement and use a Git branching system for our team. Following these instructions will significantly improve collaboration, minimize merge conflicts, and help maintain a stable codebase.
 
+### Accessing the site via live server
+
+Always start by running 
+```bash
+npm install
+```
+Then, you can run
+```bash
+netlify dev
+```
+to view the site via your local server.
+
 ### Recommended Strategy: Feature Branch Workflow
 
 For our team's size, the **Feature Branch Workflow** is the simplest and most effective strategy.
