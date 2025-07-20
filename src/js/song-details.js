@@ -16,7 +16,9 @@ async function showSongDetails(songTitle, artist) {
         <p id="artist-name">Artist: ${song.artistName}</p>
         <p id="album-name">Album: ${song.collectionName}</p>
         <p id="song-genre">Genre: ${song.primaryGenreName}</p>
-        <p id="song-length">Length: ${ConvertMillisToMins(song.trackTimeMillis)}</p>
+        <p id="song-length">Length: ${ConvertMillisToMins(
+          song.trackTimeMillis
+        )}</p>
         <audio controls id="song-snippet">
             <source src="${song.previewUrl}" type="audio/mpeg">
                 Your browser does not support the audio element.
