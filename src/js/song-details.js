@@ -12,11 +12,11 @@ async function showSongDetails(songTitle, artist) {
         <img src="${song.artworkUrl100}" alt="${song.artistName} ${
     song.collectionName
   }">
-        <p id="song-name">${song.trackName}</p>
-        <p id="artist-name">${song.artistName}</p>
-        <p id="album-name">${song.collectionName}</p>
-        <p id="song-genre">${song.primaryGenreName}</p>
-        <p id="song-length">${ConvertMillisToMins(song.trackTimeMillis)}</p>
+        <p id="song-name">Name: ${song.trackName}</p>
+        <p id="artist-name">Artist: ${song.artistName}</p>
+        <p id="album-name">Album: ${song.collectionName}</p>
+        <p id="song-genre">Genre: ${song.primaryGenreName}</p>
+        <p id="song-length">Length: ${ConvertMillisToMins(song.trackTimeMillis)}</p>
         <audio controls id="song-snippet">
             <source src="${song.previewUrl}" type="audio/mpeg">
                 Your browser does not support the audio element.
