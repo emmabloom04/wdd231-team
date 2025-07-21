@@ -1,4 +1,5 @@
-import { FindSong, ConvertMillisToMins } from "./main";
+import { FindSong } from "./main";
+import { ConvertMillisToMins } from "./song";
 
 async function showSongDetails(songTitle, artist) {
   let song = await FindSong(songTitle, artist);
