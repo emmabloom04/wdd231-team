@@ -53,3 +53,16 @@ if (document.title == "New Song") {
     window.location.href = "index.html";
   });
 }
+
+if (document.title == "Join Today") {
+  const form = document.getElementById("contact-us");
+  document.getElementById("join").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (form.reportValidity()) {
+      const name = document.getElementById("full-name").value;
+      const thankYou = document.getElementById("thank-you");
+      thankYou.innerHTML = `<p>Thank you for signing up ${name}!</p>`;
+    }
+  });
+}
