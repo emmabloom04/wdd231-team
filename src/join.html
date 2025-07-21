@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join Today</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img id="logo" src="images/spinlist.jpg" alt="logo" />
+      </a>
+      <nav>
+        <a href="join.html">Join Today</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Join the Spinlist Club!</h1>
+      <div id="form-container">
+        <form action="#" id="contact-us">
+          <label for="fullName">
+            Full name:
+            <input
+              type="text"
+              id="full-name"
+              name="fullName"
+              required
+              pattern="^[A-Z].*"
+              title="Please be sure to capitalize your name!"
+            />
+          </label>
+          <label for="email">
+            Email:
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              maxlength="30"
+            />
+          </label>
+          <label for="phoneNumber">
+            Phone number:
+            <input
+              type="text"
+              id="phone-number"
+              name="phoneNumber"
+              required
+              maxlength="11"
+              minlength="10"
+              pattern="^\d+$"
+              title="Please input a valid phone number."
+            />
+          </label>
+          <label for="streetAddress">
+            Street Address:
+            <input
+              type="text"
+              id="street-address"
+              name="streetAddress"
+              required
+              maxlength="30"
+              title="Please make sure your address is shorter."
+            />
+          </label>
+          <label for="city">
+            City:
+            <input
+              type="text"
+              id="city"
+              name="city"
+              required
+              maxlength="20"
+              title="Please make your city name shorter."
+            />
+          </label>
+          <label for="state">
+            State:
+            <input
+              type="text"
+              id="state"
+              name="state"
+              required
+              pattern="^[A-Z]{2}$"
+              title="Please make sure to use a proper state abbreviation that is capitalized."
+            />
+            <label for="zipCode">
+              Zip Code:
+              <input
+                type="text"
+                id="zip-code"
+                name="zipCode"
+                required
+                pattern="^\d{5,10}$"
+                title="Please make sure your zip code is between 5 and 10 numbers, and includes no dashes."
+              />
+            </label>
+          </label>
+          <button id="join">Sign up today!</button>
+        </form>
+      </div>
+      <div id="thank-you"></div>
+    </main>
+    <footer>
+      <p>Spinlist &copy;2025</p>
+    </footer>
+  </body>
+</html>
