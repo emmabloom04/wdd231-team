@@ -19,7 +19,7 @@ export async function SongTemplate(artist, songTitle, index) {
   if (!song) {
     return `<div class="song" data-index="${index}">
               <p>No song found for "${artistName} - ${title}"</p>
-              <button class="delete-song" data-index="${index}">Delete Song</button>
+              <button class="delete-song" data-index="${index}">Delete</button>
             </div>`;
   }
   return `<div class="song" data-index="${index}">

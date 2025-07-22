@@ -1,4 +1,5 @@
 import { SongTemplate } from "./song";
+import { HideModal, ShowModal } from "./modal";
 
 export function AddSongs(songList) {
   const songTitle = document.getElementById("title").value;
@@ -27,13 +28,32 @@ export async function LoadSongs(songList) {
 
   // Setup delete buttons
   const deleteButtons = document.querySelectorAll(".delete-song");
+  const yesButton = document.getElementById("delete-true");
+  const noButton = document.getElementById("delete-false");
   deleteButtons.forEach((button) => {
-    button.addEventListener("click", (e) => {
-      const indexToDelete = parseInt(button.getAttribute("data-index"));
-      let songList = JSON.parse(localStorage.getItem("songList")) || [];
-      songList.splice(indexToDelete, 1);
-      localStorage.setItem("songList", JSON.stringify(songList));
-      LoadSongs(songList); // Reload songs after deletion
+    button.addEventListener("click", () => {
+      ShowModal();
+      yesButton.addEventListener("click", () => {
+        HideModal();
+        const indexToDelete = parseInt(button.getAttribute("data-index"));
+        let songList = JSON.parse(localStorage.getItem("songList")) || [];
+        songList.splice(indexToDelete, 1);
+        localStorage.setItem("songList", JSON.stringify(songList));
+        LoadSongs(songList); // Reload songs after deletion
+      });
+      noButton.addEventListener("click", () => {
+        HideModal();
+      });
+      document
+        .querySelector(".modal-container")
+        .addEventListener("click", () => {
+          HideModal();
+        });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          HideModal();
+        }
+      });
     });
   });
 }

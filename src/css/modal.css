@@ -1,0 +1,38 @@
+@import "variables.css";
+.modal-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: var(--modal-background-color);
+  font-family: var(--body-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  height: 150px;
+  width: 400px;
+  background-color: var(--song-background-color);
+  box-shadow: 0 4px 8px var(--box-shadow);
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+}
+
+#modal-text {
+    font-size: 1.2em;
+    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+}
+
+#delete-false, #delete-true {
+    margin: 0 1rem;
+}
+
+.hide-modal {
+  display: none;
+}
