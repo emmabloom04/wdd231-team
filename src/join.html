@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/main.js" defer></script>
   </head>
-  <body>
+  <body id="join-us-body">
     <header>
       <a href="index.html">
         <img id="logo" src="images/spinlist.jpg" alt="logo" />
@@ -19,7 +19,7 @@
     <main>
       <h1>Join the Spinlist Club!</h1>
       <div id="form-container">
-        <form action="#" id="contact-us">
+        <form action="#" id="join-us-form">
           <label for="fullName">
             Full name:
             <input
@@ -86,18 +86,19 @@
               pattern="^[A-Z]{2}$"
               title="Please make sure to use a proper state abbreviation that is capitalized."
             />
-            <label for="zipCode">
-              Zip Code:
-              <input
-                type="text"
-                id="zip-code"
-                name="zipCode"
-                required
-                pattern="^\d{5,10}$"
-                title="Please make sure your zip code is between 5 and 10 numbers, and includes no dashes."
-              />
-            </label>
           </label>
+          <label for="zipCode">
+            Zip Code:
+            <input
+              type="text"
+              id="zip-code"
+              name="zipCode"
+              required
+              pattern="^\d{5,10}$"
+              title="Please make sure your zip code is between 5 and 10 numbers, and includes no dashes."
+            />
+          </label>
+
           <button id="join">Sign up today!</button>
         </form>
       </div>

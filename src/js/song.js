@@ -4,9 +4,9 @@ export function ConvertMillisToMins(milliseconds) {
   const totalSeconds = Math.floor(milliseconds / 1000);
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 60;
-  return `${minutes} minutes and ${seconds
+  return `${minutes} min and ${seconds
     .toString()
-    .padStart(2, "0")} seconds`;
+    .padStart(2, "0")} sec`;
 }
 
 export async function SongTemplate(artist, songTitle, index) {

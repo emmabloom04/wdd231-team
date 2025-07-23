@@ -1,5 +1,5 @@
 @import "utilities.css";
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1050px) {
   .music-library {
     grid-template-columns: 1fr 1fr;
   }
@@ -11,5 +11,14 @@
   .music-library {
     grid-template-columns: 1fr;
     margin: 1rem;
+  }
+  #join-us-form input {
+    font-size: 1rem;
+  }
+  #new-song-main {
+    margin: 5rem;
+  }
+  button#join {
+    width: 100%;
   }
 }

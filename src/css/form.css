@@ -1,4 +1,42 @@
-form {
-    padding: 100px;
-    margin-bottom: 200px;
+@import "variables.css";
+#form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: var(--song-background-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#new-song-main {
+    margin: 7.5rem;
+}
+#artist-label {
+    margin-top: 1rem;
+}
+#join-us-form label, #new-song-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#join-us-form input, #new-song-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#join-us-form input:focus, #new-song-form input:focus {
+  border-color: #0077cc;
+  outline: none;
+  background-color: #eef6ff;
+}
+#join, #save-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin-top: 10px;
 }
